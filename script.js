@@ -2,14 +2,14 @@
 // Menu Filter Functionality
 // ============================================
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Get all filter tabs and menu items
     const filterTabs = document.querySelectorAll('.filter-tab');
     const menuItems = document.querySelectorAll('.menu-item');
 
     // Add click event to each filter tab
     filterTabs.forEach(tab => {
-        tab.addEventListener('click', function() {
+        tab.addEventListener('click', function () {
             // Get the selected category
             const category = this.getAttribute('data-category');
 
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Filter menu items
             menuItems.forEach(item => {
                 const itemCategory = item.getAttribute('data-category');
-                
+
                 if (category === 'all' || itemCategory === category) {
                     // Show item with fade-in effect
                     item.classList.remove('hidden');
@@ -55,10 +55,10 @@ document.addEventListener('DOMContentLoaded', function() {
 // ============================================
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+    anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
-        
+
         if (target) {
             const headerOffset = 80;
             const elementPosition = target.getBoundingClientRect().top;
@@ -79,7 +79,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const header = document.querySelector('.main-header');
 let lastScroll = 0;
 
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     const currentScroll = window.pageYOffset;
 
     // Add solid background when scrolled down
@@ -105,7 +105,7 @@ const observerOptions = {
     rootMargin: '0px 0px -100px 0px'
 };
 
-const observer = new IntersectionObserver(function(entries) {
+const observer = new IntersectionObserver(function (entries) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.style.opacity = '1';
@@ -124,29 +124,101 @@ sections.forEach(section => {
 });
 
 // ============================================
-// Mobile CTA Button - Hide on Scroll Down
+// Mobile CTA Button Functionality
 // ============================================
 
+const mobileBookingCta = document.getElementById('mobileBookingCta');
 let lastScrollPosition = 0;
-const mobileCta = document.getElementById('mobileCta');
 
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     const currentScrollPosition = window.pageYOffset;
-    
-    if (window.innerWidth <= 768) {
+
+    if (window.innerWidth <= 768 && mobileBookingCta) {
         if (currentScrollPosition > lastScrollPosition && currentScrollPosition > 100) {
             // Scrolling down - hide button
-            mobileCta.style.transform = 'translateX(-50%) translateY(100px)';
-            mobileCta.style.opacity = '0';
+            mobileBookingCta.style.transform = 'translateX(-50%) translateY(100px)';
+            mobileBookingCta.style.opacity = '0';
         } else {
             // Scrolling up - show button
-            mobileCta.style.transform = 'translateX(-50%) translateY(0)';
-            mobileCta.style.opacity = '1';
+            mobileBookingCta.style.transform = 'translateX(-50%) translateY(0)';
+            mobileBookingCta.style.opacity = '1';
         }
     }
-    
+
     lastScrollPosition = currentScrollPosition;
 });
+
+// ============================================
+// Booking Modal Functionality
+// ============================================
+
+const bookingModal = document.getElementById('bookingModal');
+const bookingCta = document.getElementById('bookingCta');
+const closeModal = document.getElementById('closeModal');
+const bookingForm = document.getElementById('bookingForm');
+
+// Open modal when clicking booking CTA
+if (bookingCta) {
+    bookingCta.addEventListener('click', function (e) {
+        e.preventDefault();
+        bookingModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    });
+}
+
+// Open modal from mobile CTA
+if (mobileBookingCta) {
+    mobileBookingCta.addEventListener('click', function (e) {
+        e.preventDefault();
+        bookingModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    });
+}
+
+// Close modal
+function closeBookingModal() {
+    bookingModal.classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+
+if (closeModal) {
+    closeModal.addEventListener('click', closeBookingModal);
+}
+
+// Close modal when clicking outside
+bookingModal.addEventListener('click', function (e) {
+    if (e.target === bookingModal) {
+        closeBookingModal();
+    }
+});
+
+// Handle form submission
+if (bookingForm) {
+    bookingForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        // Get form data
+        const formData = {
+            date: document.getElementById('bookingDate').value,
+            time: document.getElementById('bookingTime').value,
+            persons: document.getElementById('bookingPersons').value,
+            name: document.getElementById('bookingName').value,
+            phone: document.getElementById('bookingPhone').value
+        };
+
+        // In a real application, you would send this data to a server
+        console.log('Booking request:', formData);
+
+        // Close modal and show success message
+        closeBookingModal();
+
+        // Show success message
+        alert('Grazie! Tisch angefragt.\n\nWir haben Ihre Reservierungsanfrage erhalten und werden uns in Kürze bei Ihnen melden.');
+
+        // Reset form
+        bookingForm.reset();
+    });
+}
 
 // ============================================
 // Performance: Lazy Loading Enhancement
@@ -166,7 +238,7 @@ document.querySelectorAll('img').forEach(img => {
 const menuCards = document.querySelectorAll('.menu-item');
 
 menuCards.forEach(card => {
-    card.addEventListener('mouseenter', function() {
+    card.addEventListener('mouseenter', function () {
         this.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
     });
 });
