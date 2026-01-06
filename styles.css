@@ -847,3 +847,177 @@ section {
     transform: translateY(-3px);
     box-shadow: 0 6px 25px rgba(198, 93, 71, 0.4);
 }
+
+/* ============================================
+   Language Switcher
+   ============================================ */
+.language-switcher {
+    padding: 0.6rem 1rem;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--color-white);
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: var(--transition);
+    backdrop-filter: blur(10px);
+}
+
+.language-switcher:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.language-switcher:focus {
+    outline: none;
+    border-color: var(--color-accent-terra);
+    box-shadow: 0 0 0 3px rgba(198, 93, 71, 0.2);
+}
+
+.language-switcher option {
+    background-color: var(--color-text);
+    color: var(--color-white);
+}
+
+/* ============================================
+   Nutrition Info Overlay
+   ============================================ */
+.menu-item-image {
+    position: relative;
+}
+
+.nutrition-info-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.4rem 0.9rem;
+    margin-top: 0.5rem;
+    border: 2px solid var(--color-accent-olive);
+    border-radius: 20px;
+    background-color: transparent;
+    color: var(--color-accent-olive);
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.nutrition-info-btn:hover {
+    background-color: var(--color-accent-olive);
+    color: var(--color-white);
+    transform: translateY(-2px);
+}
+
+.nutrition-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(43, 43, 43, 0.95);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+    z-index: 10;
+    cursor: pointer;
+}
+
+.nutrition-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.nutrition-content {
+    color: var(--color-white);
+    text-align: center;
+    padding: 2rem;
+}
+
+.nutrition-content h4 {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    color: var(--color-accent-terra);
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+}
+
+.nutrition-content h4:first-child {
+    margin-top: 0;
+}
+
+.nutrition-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* ============================================
+   Footer Booking CTA
+   ============================================ */
+.footer-booking-cta {
+    display: inline-block;
+    margin-top: 1.5rem;
+    background: linear-gradient(135deg, var(--color-accent-terra) 0%, #d47359 100%);
+    color: var(--color-white) !important;
+    padding: 0.9rem 2rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 15px rgba(198, 93, 71, 0.4);
+    transition: var(--transition);
+    text-align: center;
+}
+
+.footer-booking-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(198, 93, 71, 0.5);
+}
+
+/* ============================================
+   Logo Link Styling
+   ============================================ */
+.logo {
+    display: block;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.logo:hover {
+    opacity: 0.8;
+    transform: scale(1.02);
+}
+
+.logo h2 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    color: var(--color-white);
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+/* ============================================
+   Responsive Adjustments
+   ============================================ */
+@media (max-width: 768px) {
+    .language-switcher {
+        display: none;
+    }
+
+    .nutrition-content {
+        padding: 1rem;
+    }
+
+    .nutrition-content h4 {
+        font-size: 1rem;
+    }
+
+    .nutrition-content p {
+        font-size: 0.9rem;
+    }
+}
