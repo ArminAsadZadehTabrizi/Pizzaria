@@ -9,8 +9,7 @@
         content="Handgemachte Pasta & echte Amore. Moderne italienische Trattoria im Herzen von Düsseldorf. Tradition aus Neapel.">
 
     <!-- Favicon -->
-    <link rel="icon"
-        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍕</text></svg>">
+    <link rel="icon" href="favicon.png">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -65,7 +64,6 @@
             <h2 class="section-title">Unsere Speisekarte</h2>
             <p class="section-subtitle">Tradition trifft Geschmack</p>
 
-            <!-- Filter Tabs -->
             <div class="menu-filters">
                 <button class="filter-tab active" data-category="all">Alle</button>
                 <button class="filter-tab" data-category="antipasti">Antipasti</button>
@@ -74,208 +72,204 @@
                 <button class="filter-tab" data-category="desserts">Desserts</button>
             </div>
 
-            <!-- Menu Grid -->
             <div class="menu-grid">
-                <!-- Antipasti Items -->
-                <div class="menu-item" data-category="antipasti">
+                <div class="menu-item" data-category="antipasti" data-title="Bruschetta Classica" data-price="8€"
+                    data-desc="Geröstetes Ciabatta mit frischen Tomaten, Basilikum und nativem Olivenöl extra"
+                    data-nutrition="280 kcal | 12g Fett | 35g Kohlenhydrate" data-allergens="Gluten (Weizen)">
                     <div class="menu-item-image">
-                        <img src="https://images.unsplash.com/photo-1608897013039-887f21d8c804?w=800&h=450&fit=crop"
-                            alt="Bruschetta Classica" width="800" height="450" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1506280754576-f6fa8a873550?w=800&h=600&fit=crop&auto=format&q=80"
+                            alt="Bruschetta" loading="lazy">
                     </div>
                     <div class="menu-item-content">
                         <div class="menu-item-header">
                             <h3>Bruschetta Classica</h3>
                             <span class="price">8€</span>
                         </div>
-                        <p class="menu-item-description">Geröstetes Ciabatta mit frischen Tomaten, Basilikum und nativem
-                            Olivenöl extra</p>
-                        <div class="menu-badges">
-                            <span class="badge badge-veggie">🌱 Vegetarisch</span>
-                        </div>
+                        <p class="menu-item-description">Geröstetes Ciabatta, Tomaten, Basilikum</p>
+                        <div class="menu-badges"><span class="badge badge-veggie">🌱 Vegetarisch</span></div>
                     </div>
                 </div>
 
-                <div class="menu-item" data-category="antipasti">
+                <div class="menu-item" data-category="antipasti" data-title="Caprese di Bufala" data-price="12€"
+                    data-desc="Original Büffelmozzarella aus Kampanien, sonnegereifte Tomaten, frisches Basilikum und Olivenöl."
+                    data-nutrition="420 kcal | 35g Fett | 4g Kohlenhydrate" data-allergens="Laktose (Milch)">
                     <div class="menu-item-image">
-                        <img src="https://images.unsplash.com/photo-1529312266912-b33cf6227e24?auto=format&fit=crop&w=800&q=80"
-                            alt="Caprese di Bufala" width="800" height="450" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1574894709920-11b28e7367e3?w=800&h=600&fit=crop&auto=format&q=80"
+                            alt="Caprese" loading="lazy">
                     </div>
                     <div class="menu-item-content">
                         <div class="menu-item-header">
                             <h3>Caprese di Bufala</h3>
                             <span class="price">12€</span>
                         </div>
-                        <p class="menu-item-description">Büffelmozzarella, sonnegereifte Tomaten, frisches Basilikum</p>
-                        <div class="menu-badges">
-                            <span class="badge badge-veggie">🌱 Vegetarisch</span>
-                        </div>
+                        <p class="menu-item-description">Büffelmozzarella, Tomaten, Basilikum</p>
+                        <div class="menu-badges"><span class="badge badge-veggie">🌱 Vegetarisch</span></div>
                     </div>
                 </div>
 
-                <div class="menu-item" data-category="antipasti">
+                <div class="menu-item" data-category="antipasti" data-title="Vitello Tonnato" data-price="14€"
+                    data-desc="Zarte Kalbsscheiben, rosa gegart, mit einer Creme aus Thunfisch, Kapern und Sardellen."
+                    data-nutrition="380 kcal | 25g Fett | 2g Kohlenhydrate" data-allergens="Fisch, Ei, Sellerie">
                     <div class="menu-item-image">
-                        <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=800&h=450&fit=crop"
-                            alt="Vitello Tonnato" width="800" height="450" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=800&q=80"
+                            alt="Vitello Tonnato" loading="lazy">
                     </div>
                     <div class="menu-item-content">
                         <div class="menu-item-header">
                             <h3>Vitello Tonnato</h3>
                             <span class="price">14€</span>
                         </div>
-                        <p class="menu-item-description">Zarte Kalbsscheiben mit Thunfischcreme und Kapern</p>
+                        <p class="menu-item-description">Kalbsscheiben mit Thunfischcreme</p>
                     </div>
                 </div>
 
-                <!-- Pizza Items -->
-                <div class="menu-item" data-category="pizza">
+                <div class="menu-item" data-category="pizza" data-title="Pizza Margherita" data-price="11€"
+                    data-desc="Der Klassiker: San Marzano Tomaten D.O.P., Fior di Latte Mozzarella, frisches Basilikum."
+                    data-nutrition="850 kcal | 32g Fett | 98g Kohlenhydrate" data-allergens="Gluten (Weizen), Laktose">
                     <div class="menu-item-image">
-                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&h=450&fit=crop"
-                            alt="Margherita" width="800" height="450" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=800&q=80"
+                            alt="Margherita" loading="lazy">
                     </div>
                     <div class="menu-item-content">
                         <div class="menu-item-header">
                             <h3>Margherita</h3>
                             <span class="price">11€</span>
                         </div>
-                        <p class="menu-item-description">Die Königin der Pizzen: San Marzano Tomaten, Mozzarella,
-                            Basilikum</p>
-                        <div class="menu-badges">
-                            <span class="badge badge-veggie">🌱 Vegetarisch</span>
-                        </div>
+                        <p class="menu-item-description">San Marzano Tomaten, Mozzarella</p>
+                        <div class="menu-badges"><span class="badge badge-veggie">🌱 Vegetarisch</span></div>
                     </div>
                 </div>
 
-                <div class="menu-item" data-category="pizza">
+                <div class="menu-item" data-category="pizza" data-title="Pizza Diavola" data-price="13€"
+                    data-desc="Pikante Salami (Salsiccia piccante), rote Zwiebeln, Chili-Öl."
+                    data-nutrition="920 kcal | 45g Fett | 96g Kohlenhydrate" data-allergens="Gluten, Laktose">
                     <div class="menu-item-image">
-                        <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=800&h=450&fit=crop"
-                            alt="Diavola" width="800" height="450" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1628840042765-356cda07504e?auto=format&fit=crop&w=800&q=80"
+                            alt="Diavola" loading="lazy">
                     </div>
                     <div class="menu-item-content">
                         <div class="menu-item-header">
                             <h3>Diavola</h3>
                             <span class="price">13€</span>
                         </div>
-                        <p class="menu-item-description">Pikante Salami, Mozzarella, Chili, Tomatensauce</p>
-                        <div class="menu-badges">
-                            <span class="badge badge-spicy">🌶️ Scharf</span>
-                        </div>
+                        <p class="menu-item-description">Pikante Salami, Chili</p>
+                        <div class="menu-badges"><span class="badge badge-spicy">🌶️ Scharf</span></div>
                     </div>
                 </div>
 
-                <div class="menu-item" data-category="pizza">
+                <div class="menu-item" data-category="pizza" data-title="Pizza Prosciutto e Funghi" data-price="14€"
+                    data-desc="Tomatensauce, Mozzarella, italienischer Schinken (Prosciutto Cotto) und frische Champignons."
+                    data-nutrition="880 kcal | 38g Fett | 95g Kohlenhydrate" data-allergens="Gluten (Weizen), Laktose">
                     <div class="menu-item-image">
-                        <img src="https://images.unsplash.com/photo-1595854341625-f33ee10dbf94?w=800&h=450&fit=crop"
-                            alt="Tartufo" width="800" height="450" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1595854341625-f33ee10dbf94?auto=format&fit=crop&w=800&q=80"
+                            alt="Prosciutto e Funghi" loading="lazy">
                     </div>
                     <div class="menu-item-content">
                         <div class="menu-item-header">
-                            <h3>Tartufo</h3>
-                            <span class="price">18€</span>
+                            <h3>Prosciutto e Funghi</h3>
+                            <span class="price">14€</span>
                         </div>
-                        <p class="menu-item-description">Schwarzer Trüffel, Mozzarella, Parmigiano, Trüffelöl</p>
-                        <div class="menu-badges">
-                            <span class="badge badge-veggie">🌱 Vegetarisch</span>
-                        </div>
+                        <p class="menu-item-description">Schinken, Champignons</p>
                     </div>
                 </div>
 
-                <!-- Pasta Items -->
-                <div class="menu-item" data-category="pasta">
+                <div class="menu-item" data-category="pasta" data-title="Spaghetti Carbonara" data-price="15€"
+                    data-desc="Klassisch römisch: Spaghetti mit Guanciale, Ei, Pecorino Romano und schwarzem Pfeffer."
+                    data-nutrition="720 kcal | 35g Fett | 75g Kohlenhydrate" data-allergens="Gluten, Ei, Laktose">
                     <div class="menu-item-image">
-                        <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=800&h=450&fit=crop"
-                            alt="Spaghetti Carbonara" width="800" height="450" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1588013273468-315fd88ea34c?w=800&h=600&fit=crop&auto=format&q=80"
+                            alt="Carbonara" loading="lazy">
                     </div>
                     <div class="menu-item-content">
                         <div class="menu-item-header">
                             <h3>Spaghetti Carbonara</h3>
-                            <span class="price">14€</span>
+                            <span class="price">15€</span>
                         </div>
-                        <p class="menu-item-description">Handgemachte Spaghetti, Guanciale, Eigelb, Pecorino Romano</p>
+                        <p class="menu-item-description">Guanciale, Ei, Pecorino</p>
                     </div>
                 </div>
 
-                <div class="menu-item" data-category="pasta">
+                <div class="menu-item" data-category="pasta" data-title="Ravioli di Ricotta" data-price="16€"
+                    data-desc="Hausgemachte Ravioli gefüllt mit Ricotta und Spinat, geschwenkt in Salbeibutter."
+                    data-nutrition="580 kcal | 28g Fett | 65g Kohlenhydrate" data-allergens="Gluten, Ei, Laktose">
                     <div class="menu-item-image">
-                        <img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=800&h=450&fit=crop"
-                            alt="Penne Arrabbiata" width="800" height="450" loading="lazy">
-                    </div>
-                    <div class="menu-item-content">
-                        <div class="menu-item-header">
-                            <h3>Penne Arrabbiata</h3>
-                            <span class="price">12€</span>
-                        </div>
-                        <p class="menu-item-description">Pikante Tomatensauce, Knoblauch, Peperoncino, Basilikum</p>
-                        <div class="menu-badges">
-                            <span class="badge badge-veggie">🌱 Vegetarisch</span>
-                            <span class="badge badge-spicy">🌶️ Scharf</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="menu-item" data-category="pasta">
-                    <div class="menu-item-image">
-                        <img src="https://images.unsplash.com/photo-1587394211304-84d49058d8b8?auto=format&fit=crop&w=800&q=80"
-                            alt="Ravioli di Ricotta" width="800" height="450" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1587740908075-9e245070dfaa?w=800&h=600&fit=crop&auto=format&q=80"
+                            alt="Ravioli" loading="lazy">
                     </div>
                     <div class="menu-item-content">
                         <div class="menu-item-header">
                             <h3>Ravioli di Ricotta</h3>
                             <span class="price">16€</span>
                         </div>
-                        <p class="menu-item-description">Hausgemachte Ravioli mit Ricotta und Spinat, Salbeibutter</p>
-                        <div class="menu-badges">
-                            <span class="badge badge-veggie">🌱 Vegetarisch</span>
-                        </div>
+                        <p class="menu-item-description">Ricotta, Spinat, Salbeibutter</p>
+                        <div class="menu-badges"><span class="badge badge-veggie">🌱 Vegetarisch</span></div>
                     </div>
                 </div>
 
-                <!-- Dolci Items -->
-                <div class="menu-item" data-category="desserts">
+                <div class="menu-item" data-category="pasta" data-title="Penne Arrabbiata" data-price="13€"
+                    data-desc="Penne in pikanter Tomatensauce mit Knoblauch, Peperoncino und frischem Basilikum."
+                    data-nutrition="620 kcal | 18g Fett | 95g Kohlenhydrate" data-allergens="Gluten (Weizen)">
                     <div class="menu-item-image">
-                        <img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=800&h=450&fit=crop"
-                            alt="Tiramisu" width="800" height="450" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=800&h=600&fit=crop&auto=format&q=80"
+                            alt="Penne Arrabbiata" loading="lazy">
                     </div>
                     <div class="menu-item-content">
                         <div class="menu-item-header">
-                            <h3>Tiramisù della Casa</h3>
+                            <h3>Penne Arrabbiata</h3>
+                            <span class="price">13€</span>
+                        </div>
+                        <p class="menu-item-description">Pikante Tomatensauce, Knoblauch</p>
+                        <div class="menu-badges"><span class="badge badge-spicy">🌶️ Scharf</span><span
+                                class="badge badge-veggie">🌱 Vegetarisch</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="desserts" data-title="Tiramisu Classico" data-price="7€"
+                    data-desc="Der italienische Dessert-Klassiker: Mascarpone-Creme mit Espresso-getränkten Löffelbiskuits, Kakao."
+                    data-nutrition="380 kcal | 22g Fett | 38g Kohlenhydrate" data-allergens="Gluten, Ei, Laktose">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=800&q=80"
+                            alt="Tiramisu" loading="lazy">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Tiramisu Classico</h3>
                             <span class="price">7€</span>
                         </div>
-                        <p class="menu-item-description">Klassisch nach Familienrezept: Mascarpone, Espresso, Kakao</p>
-                        <div class="menu-badges">
-                            <span class="badge badge-veggie">🌱 Vegetarisch</span>
-                        </div>
+                        <p class="menu-item-description">Mascarpone, Espresso, Kakao</p>
                     </div>
                 </div>
 
-                <div class="menu-item" data-category="desserts">
+                <div class="menu-item" data-category="desserts" data-title="Cannoli Siciliani" data-price="8€"
+                    data-desc="Knusprige Teigrollen aus Sizilien, gefüllt mit süßer Ricottacreme und Pistazien."
+                    data-nutrition="320 kcal | 18g Fett | 35g Kohlenhydrate"
+                    data-allergens="Gluten, Laktose, Schalenfrüchte">
                     <div class="menu-item-image">
-                        <img src="https://images.unsplash.com/photo-1603532648955-039310d9ed75?w=800&h=450&fit=crop"
-                            alt="Panna Cotta" width="800" height="450" loading="lazy">
-                    </div>
-                    <div class="menu-item-content">
-                        <div class="menu-item-header">
-                            <h3>Panna Cotta</h3>
-                            <span class="price">6€</span>
-                        </div>
-                        <p class="menu-item-description">Cremiges Sahne-Dessert mit Beerenkompott</p>
-                        <div class="menu-badges">
-                            <span class="badge badge-veggie">🌱 Vegetarisch</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="menu-item" data-category="desserts">
-                    <div class="menu-item-image">
-                        <img src="https://images.unsplash.com/photo-1551024601-569d6f4638a4?auto=format&fit=crop&w=800&q=80"
-                            alt="Cannoli Siciliani" width="800" height="450" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1519915028121-7d3463d20b13?w=800&h=600&fit=crop&auto=format&q=80"
+                            alt="Cannoli" loading="lazy">
                     </div>
                     <div class="menu-item-content">
                         <div class="menu-item-header">
                             <h3>Cannoli Siciliani</h3>
                             <span class="price">8€</span>
                         </div>
-                        <p class="menu-item-description">Knusprige Teigrollen gefüllt mit süßer Ricottacreme und
-                            Pistazien</p>
+                        <p class="menu-item-description">Ricotta-Creme, Pistazien</p>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="desserts" data-title="Panna Cotta" data-price="7€"
+                    data-desc="Seidig-cremiges Dessert aus Sahne und Vanille, serviert mit hausgemachter Beerensauce."
+                    data-nutrition="290 kcal | 20g Fett | 22g Kohlenhydrate" data-allergens="Laktose (Milch)">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=800&q=80"
+                            alt="Panna Cotta" loading="lazy">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Panna Cotta</h3>
+                            <span class="price">7€</span>
+                        </div>
+                        <p class="menu-item-description">Vanille, Beerensauce</p>
                     </div>
                 </div>
             </div>
@@ -287,20 +281,23 @@
         <div class="container">
             <div class="chef-content">
                 <div class="chef-image">
-                    <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb4c?italian-chef-portrait-smiling&w=800&h=1000&fit=crop"
-                        alt="Chef Luigi bei der Pasta-Zubereitung" width="800" height="1000" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1750943082154-663e88a6ffe9?w=800&h=1000&fit=crop"
+                        alt="Chef Luigi" width="800" height="1000" loading="lazy" style="object-position: top;">
                 </div>
                 <div class="chef-text">
-                    <h2 class="section-title">Unser Chef Luigi</h2>
-                    <p class="lead">Tradition aus Neapel</p>
-                    <p>Luigi Esposito bringt die authentische neapolitanische Küche nach Düsseldorf. Aufgewachsen in
+                    <h2 class="section-title" data-i18n="chef_title">Unser Chef Luigi</h2>
+                    <p class="lead" data-i18n="chef_subtitle">Tradition aus Neapel</p>
+                    <p data-i18n="chef_p1">Luigi Esposito bringt die authentische neapolitanische Küche nach Düsseldorf.
+                        Aufgewachsen in
                         einer Familie von Pasta-Machern in der dritten Generation, lernte er die Kunst der handgemachten
                         Pasta bereits als Kind von seiner Nonna.</p>
-                    <p>Jede Mahlzeit bei AMORE & PASTA wird mit derselben Leidenschaft und Sorgfalt zubereitet, die
+                    <p data-i18n="chef_p2">Jede Mahlzeit bei AMORE & PASTA wird mit derselben Leidenschaft und Sorgfalt
+                        zubereitet, die
                         Luigi in den Straßen Neapels gelernt hat. Von der frischen Pasta, die jeden Morgen von Hand
                         gerollt wird, bis zur perfekt gebackenen Pizza aus unserem Steinofen – hier schmecken Sie echte
                         italienische Tradition.</p>
-                    <p class="quote">"Essen ist Liebe. Und Liebe ist das, was wir in jedes Gericht legen."</p>
+                    <p class="quote" data-i18n="chef_quote">"Essen ist Liebe. Und Liebe ist das, was wir in jedes
+                        Gericht legen."</p>
                     <p class="signature">– Chef Luigi Esposito</p>
                 </div>
             </div>
@@ -316,21 +313,24 @@
             <div class="reviews-grid">
                 <div class="review-card">
                     <div class="stars">★★★★★</div>
-                    <p class="review-text">"Die beste Pizza außerhalb Italiens! Der Teig ist perfekt, die Zutaten frisch
+                    <p class="review-text" data-i18n="review_1">"Die beste Pizza außerhalb Italiens! Der Teig ist
+                        perfekt, die Zutaten frisch
                         und der Service herzlich. Luigi's Carbonara ist göttlich!"</p>
                     <p class="reviewer-name">— Anna M., Düsseldorf</p>
                 </div>
 
                 <div class="review-card">
                     <div class="stars">★★★★★</div>
-                    <p class="review-text">"Endlich ein Restaurant, das wirklich authentisch ist. Die hausgemachte Pasta
+                    <p class="review-text" data-i18n="review_2">"Endlich ein Restaurant, das wirklich authentisch ist.
+                        Die hausgemachte Pasta
                         schmeckt wie bei Nonna in Italien. Absolute Empfehlung!"</p>
                     <p class="reviewer-name">— Marco R., Köln</p>
                 </div>
 
                 <div class="review-card">
                     <div class="stars">★★★★★</div>
-                    <p class="review-text">"Wunderschönes Ambiente und fantastisches Essen. Das Tiramisù ist ein Traum!
+                    <p class="review-text" data-i18n="review_3">"Wunderschönes Ambiente und fantastisches Essen. Das
+                        Tiramisù ist ein Traum!
                         Wir kommen definitiv wieder."</p>
                     <p class="reviewer-name">— Sarah K., Düsseldorf</p>
                 </div>
@@ -345,9 +345,21 @@
             <p class="section-subtitle">Wir freuen uns auf Ihren Besuch</p>
 
             <div class="booking-message">
-                <p>Für Reservierungen rufen Sie uns bitte an unter:</p>
+                <p class="lead-text" data-i18n="booking_lead">Sichern Sie sich Ihren Lieblingsplatz ganz bequem online.
+                </p>
+
+                <div style="margin-top: 2rem; margin-bottom: 3rem;">
+                    <a href="#booking" class="cta-button" id="bookingCtaBottom" data-i18n="booking_cta">Jetzt Tisch
+                        reservieren</a>
+                </div>
+
+                <hr style="border: 0; border-top: 1px solid #ddd; margin: 2rem auto; width: 50px;">
+
+                <p class="booking-note" data-i18n="booking_note">Für Gruppen ab 8 Personen oder kurzfristige Anfragen
+                    erreichen Sie uns auch
+                    telefonisch:</p>
                 <a href="tel:+4921112345678" class="phone-number">+49 211 1234 5678</a>
-                <p class="booking-note">oder schreiben Sie uns eine E-Mail an <a
+                <p class="booking-note"><span data-i18n="booking_email_label">E-Mail:</span> <a
                         href="mailto:reservierung@amorepasta.de">reservierung@amorepasta.de</a></p>
             </div>
         </div>
@@ -359,12 +371,12 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <h3>AMORE & PASTA</h3>
-                    <p>Italienische Trattoria</p>
-                    <p>Handgemachte Pasta seit 2020</p>
+                    <p data-i18n="footer_tagline">Italienische Trattoria</p>
+                    <p data-i18n="footer_handmade">Handgemachte Pasta seit 2020</p>
                 </div>
 
                 <div class="footer-col">
-                    <h4>Anfahrt</h4>
+                    <h4 data-i18n="footer_directions">Anfahrt</h4>
                     <div class="map-container">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2498.9999999999995!2d6.7734!3d51.2277!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTHCsDEzJzM5LjciTiA2wrA0NicyNC4yIkU!5e0!3m2!1sde!2sde!4v1234567890123!5m2!1sde!2sde"
@@ -375,14 +387,14 @@
                 </div>
 
                 <div class="footer-col">
-                    <h4>Öffnungszeiten</h4>
-                    <p><strong>Mo–Fr:</strong> 17:00 – 23:00</p>
-                    <p><strong>Sa–So:</strong> 12:00 – 23:00</p>
-                    <p class="closed">Dienstag Ruhetag</p>
+                    <h4 data-i18n="footer_hours">Öffnungszeiten</h4>
+                    <p><strong data-i18n="footer_hours_weekday">Mo–Fr:</strong> 17:00 – 23:00</p>
+                    <p><strong data-i18n="footer_hours_weekend">Sa–So:</strong> 12:00 – 23:00</p>
+                    <p class="closed" data-i18n="footer_closed">Dienstag Ruhetag</p>
                 </div>
 
                 <div class="footer-col">
-                    <h4>Kontakt</h4>
+                    <h4 data-i18n="footer_contact">Kontakt</h4>
                     <p>Carlsplatz 15</p>
                     <p>40213 Düsseldorf</p>
                     <p>Tel: +49 211 1234 5678</p>
@@ -390,13 +402,12 @@
                 </div>
 
                 <div class="footer-col">
-                    <h4>Folgen Sie uns</h4>
+                    <h4 data-i18n="footer_follow">Folgen Sie uns</h4>
                     <div class="social-links">
                         <a href="#" aria-label="Instagram">Instagram</a>
                         <a href="#" aria-label="Facebook">Facebook</a>
                         <a href="#" aria-label="TripAdvisor">TripAdvisor</a>
                     </div>
-                    <a href="#booking" class="footer-booking-cta" id="footerBookingCta">Tisch reservieren</a>
                 </div>
             </div>
 
@@ -433,30 +444,33 @@
                 <div class="form-group">
                     <label for="bookingPersons">Anzahl Personen*</label>
                     <select id="bookingPersons" name="persons" required>
-                        <option value="">Bitte wählen</option>
-                        <option value="1">1 Person</option>
-                        <option value="2">2 Personen</option>
-                        <option value="3">3 Personen</option>
-                        <option value="4">4 Personen</option>
-                        <option value="5">5 Personen</option>
-                        <option value="6">6 Personen</option>
-                        <option value="7+">7+ Personen</option>
+                        <option value="" data-i18n="select_default">Bitte wählen</option>
+                        <option value="1" data-i18n="person_1">1 Person</option>
+                        <option value="2" data-i18n="person_2">2 Personen</option>
+                        <option value="3" data-i18n="person_3">3 Personen</option>
+                        <option value="4" data-i18n="person_4">4 Personen</option>
+                        <option value="5" data-i18n="person_5">5 Personen</option>
+                        <option value="6" data-i18n="person_6">6 Personen</option>
+                        <option value="7+" data-i18n="person_7plus">7+ Personen</option>
                     </select>
                 </div>
 
                 <div class="form-group">
                     <label for="bookingName">Name*</label>
-                    <input type="text" id="bookingName" name="name" placeholder="Ihr vollständiger Name" required>
+                    <input type="text" id="bookingName" name="name" placeholder="Ihr vollständiger Name"
+                        data-i18n-placeholder="placeholder_name" required>
                 </div>
 
                 <div class="form-group">
                     <label for="bookingPhone">Telefon*</label>
-                    <input type="tel" id="bookingPhone" name="phone" placeholder="+49 123 456789" required>
+                    <input type="tel" id="bookingPhone" name="phone" placeholder="+49 123 456789"
+                        data-i18n-placeholder="placeholder_phone" required>
                 </div>
 
                 <div class="form-group">
                     <label for="bookingEmail">E-Mail*</label>
-                    <input type="email" id="bookingEmail" name="email" placeholder="ihre.email@beispiel.de" required>
+                    <input type="email" id="bookingEmail" name="email" placeholder="ihre.email@beispiel.de"
+                        data-i18n-placeholder="placeholder_email" required>
                 </div>
 
                 <button type="submit" class="submit-button">Reservierung anfragen</button>
@@ -464,8 +478,30 @@
         </div>
     </div>
 
-    <!-- Mobile Sticky CTA -->
-    <a href="#booking" class="mobile-booking-cta" id="mobileBookingCta">Tisch reservieren</a>
+    <!-- Nutrition Modal -->
+    <div id="nutritionModal" class="modal">
+        <div class="modal-content nutrition-content">
+            <button class="modal-close" id="closeNutritionModal">×</button>
+            <div class="nutrition-grid">
+                <div class="nutrition-image">
+                    <img id="modalImg" src="" alt="Dish">
+                </div>
+                <div class="nutrition-details">
+                    <h2 id="modalTitle">Dish Name</h2>
+                    <p id="modalPrice" class="modal-price">00€</p>
+                    <p id="modalDesc">Description goes here.</p>
+                    <hr>
+                    <div class="nutrition-stats">
+                        <h4 data-i18n="nutrition_header">Nährwerte & Allergene</h4>
+                        <p><strong data-i18n="energy_label">🔥 Energie:</strong> <span id="modalNutrition">...</span>
+                        </p>
+                        <p><strong data-i18n="allergens_label">⚠️ Allergene:</strong> <span
+                                id="modalAllergens">...</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
